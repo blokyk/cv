@@ -1,6 +1,31 @@
 // template by: https://github.com/caffeinatedgaze
-#let conf = yaml("config.yaml")
 #let settings = yaml("settings.yaml")
+
+#let lang = settings.lang
+#let lang = (
+  config-filename: (
+    fr: "config-fr.yaml",
+    en: "config-en.yaml"
+  ),
+  titles: (
+    edu: (fr: "Éducation", en: "Education"),
+    skills: (fr: "Compétences", en: "Skills"),
+    exp: (
+      fr: "Expériences professionnelles",
+      en: "Professional experience"
+    ),
+    proj: (
+      fr: "Engagements & projets personnels",
+      en: "Personal projects & involvements"
+    )
+  ),
+)
+
+#let intl = prop => prop.at(settings.lang)
+
+#let conf = yaml(intl(lang.config-filename))
+
+#set text(lang: settings.lang)
 
 #set page(
   paper: "a4",
@@ -41,7 +66,7 @@
     #conf.bio
   ]
 
-  = Education
+  = #intl(lang.titles.edu)
 
   #{
     for place in conf.education [
@@ -63,7 +88,7 @@
     ]
   }
 
-  = Skills
+  = #intl(lang.titles.skills)
 
   #{
     for skill in conf.skills [
@@ -95,7 +120,7 @@
 
   #v(.8em)
 
-  = Professional experience
+  = #intl(lang.titles.exp)
 
   #v(.8em)
 
@@ -140,7 +165,7 @@
 
   #v(-1em)
 
-  = Personal projects & involvements
+  = #intl(lang.titles.proj)
 
   #v(.8em)
 

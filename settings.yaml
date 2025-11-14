@@ -13,3 +13,5 @@ font:
 paragraph:
   # Distance between lines
   leading: 4pt
+
+lang: fr

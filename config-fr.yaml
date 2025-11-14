@@ -1,11 +1,11 @@
 contacts:
   name: Zoë Courvoisier-Clément
-  title: Second-year engineering student at ESISAR school
+  title: "Étudiant de 2ᵉ année d'étude d'ingénieur à l'ESISAR"
   email: pro.courvoisier@gmail.com
   phone: "06 66 05 77 47"
   address: "26000 Valence, France"
   mobility: "bus, train"
-  nationality: French
+  nationality: Française
   github: "blokyk"
 
 bio: >
@@ -14,11 +14,11 @@ bio: >
   and my daily playlist.
 
 skills:
-  - name: Spoken Languages
+  - name: Langues
     items:
-      - French
-      - English (Cambridge C1 level)
-  - name: Programming Languages
+      - Français
+      - Anglais (Cambridge C1, TOEIC C1)
+  - name: Langages de programmation
     items:
       - C#
       - C
@@ -28,24 +28,24 @@ skills:
       - Go
       - Python
       - VHDL
-  - name: Software Development Tools
+  - name: Outils
     items:
       - VS Code
       - Visual Studio 2025
       - Git
       - GitHub/GitLab
-  - name: Miscellaneous
+  - name: Autres
     items:
       - Linux administration
 
 jobs:
     # tags:
-  - position: IT division internship
+  - position: Stagiaire du service informatique
     company:
       name: Faurecia
       link: https://faurecia.com/
-    from: "2018 June"
-    to: "2018 July"
+    from: "Juin"
+    to: "Juillet 2018"
     description:
       - Repaired employees' computers
       - Checked server status
