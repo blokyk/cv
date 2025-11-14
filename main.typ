@@ -1,5 +1,5 @@
 // template by: https://github.com/caffeinatedgaze
-#let configuration = yaml("config.yaml")
+#let conf = yaml("config.yaml")
 #let settings = yaml("settings.yaml")
 
 #set page(
@@ -14,76 +14,70 @@
   font: settings.font.general
 )
 
-#let sidebarSection = {[
-  #par(justify: true)[
+#let sidebarSection = [
+  #[
+    #set text(
+      size: eval(settings.font.size.contacts),
+      font: settings.font.minor_highlight,
+    )
 
-    #par[
-      #set text(
-        size: eval(settings.font.size.contacts),
-        font: settings.font.minor_highlight,
-      )
-      
-      Email: #link("mailto:" + configuration.contacts.email) \
-      Phone: #link("tel:" + configuration.contacts.phone) \
-      // LinkedIn: #link(configuration.contacts.linkedin)[Zoë Courvoisier-Clément] \
-      GitHub: #link("https://github.com/" + configuration.contacts.github)[#configuration.contacts.github]
-      
-      #configuration.contacts.address
-      #text(fill: luma(45%))[(#configuration.contacts.mobility)]
-    ]
-    #line(length: 100%)
+    Email: #link("mailto:" + conf.contacts.email) \
+    Phone: #link("tel:" + conf.contacts.phone) \
+    // LinkedIn: #link(configuration.contacts.linkedin)[Zoë Courvoisier-Clément] \
+    GitHub: #link("https://github.com/" + conf.contacts.github)[#conf.contacts.github]
+
+    #conf.contacts.address
+    #text(fill: luma(45%))[(#conf.contacts.mobility)]
   ]
 
-  #par[
+  #line(length: 100%)
+
+  #[
     #set text(
-        eval(settings.font.size.education_description),
-        font: settings.font.minor_highlight,
+      eval(settings.font.size.education_description),
+      font: settings.font.minor_highlight,
     )
-    #configuration.bio
+
+    #conf.bio
   ]
 
   = Education
 
   #{
-    for place in configuration.education [
-        #par[
-          #set text(
-            size: eval(settings.font.size.heading),
-            font: settings.font.general
-          )
-            #place.from – #place.to \
-            #link(place.university.link)[#place.university.name]
+    for place in conf.education [
+      #set text(
+        size: eval(settings.font.size.heading),
+        font: settings.font.general
+      )
 
-          #set text(
-            eval(settings.font.size.education_description),
-            font: settings.font.minor_highlight,
-          )
+      #place.from #sym.dash.en #place.to \
+      #link(place.university.link)[#place.university.name]
 
-          *#place.degree* \
-          #place.description
-        ]
+      #set text(
+        eval(settings.font.size.education_description),
+        font: settings.font.minor_highlight,
+      )
+
+      *#place.degree* \
+      #place.description
     ]
   }
 
   = Skills
 
   #{
-    for skill in configuration.skills [
-      #par[
-        #set text(
-          size: eval(settings.font.size.description),
-        )
-        #set text(
-          // size: eval(settings.font.size.tags),
-          font: settings.font.minor_highlight,
-        )
-        *#skill.name* 
-        #linebreak()
-        #skill.items.join(" • ")
-      ]
+    for skill in conf.skills [
+      #set text(
+        // size: eval(settings.font.size.tags),
+        size: eval(settings.font.size.description),
+        font: settings.font.minor_highlight,
+      )
+
+      #strong(skill.name) \
+      #skill.items.join(" • ")
     ]
   }
-]}
+]
 
 #let mainSection = {[
 
@@ -95,111 +89,113 @@
   //   )
   // ]
 
-  #par[
-    #set text(
-      size: eval(settings.font.size.heading_huge),
-      font: settings.font.general,
-    )
-    *#configuration.contacts.name*
-  ]
+  #text(
+    size: eval(settings.font.size.heading_huge),
+    font: settings.font.general,
+    strong(conf.contacts.name)
+  )
 
-  #par[
-    #set text(
-      size: eval(settings.font.size.heading),
-      font: settings.font.minor_highlight,
-      top-edge: 0pt
-    )  
-    #configuration.contacts.title
-  ]
+  #text(
+    size: eval(settings.font.size.heading),
+    font: settings.font.minor_highlight,
+    top-edge: 0pt,
+    conf.contacts.title
+  )
 
   #v(.8em)
-  
+
   = Professional experience
 
   #v(.8em)
+
   #{
-    set par(spacing: .5em)
-    for job in configuration.jobs [
-      #par(justify: false)[
+    set par(spacing: .6em)
+
+    for job in conf.jobs [
+      #[
         #set text(
           size: eval(settings.font.size.heading),
           font: settings.font.general
         )
+
         #if(job.at("from", default: none) != none) {
-          emph[#job.from – #job.to]
+          emph[#job.from #sym.dash.en #job.to]
         } else {
           emph[#job.date]
         }
-        
+
         *#job.position*
-        #link(job.company.link)[\@  #job.company.name]    
+        #link(job.company.link)[\@  #job.company.name]
       ]
-      #par(
-        justify: false,
-        leading: eval(settings.paragraph.leading)
-      )[
-        #set text(
-          size: eval(settings.font.size.description),
-          font: settings.font.general
-        )
-        #{
-          for point in job.description [
-            #h(.8em) • #point \
-          ]
-        }
-      ]
-      #v(1em)
+
+      #parbreak()
+
+      #list(
+        indent: .8em,
+        spacing: eval(settings.paragraph.leading),
+        ..(job.description.map(
+          p =>
+            text(
+              size: eval(settings.font.size.description),
+              font: settings.font.general,
+              p
+            )
+        ))
+      )
+
+      #linebreak()
     ]
   }
 
-  #v(.8em)
+  #v(-1em)
 
   = Personal projects & involvements
 
   #v(.8em)
+
   #{
-    for proj in configuration.projects [
+    set par(justify: true)
+    set text(
+      size: eval(settings.font.size.heading),
+      font: settings.font.general
+    )
 
-      - #par(
-        justify: true,
-        leading: eval(settings.paragraph.leading),
-      )[
-        #set par(spacing: 0.8em)
+    let items = conf.projects.map(
+      proj => [
+        #let hasLink = proj.project.keys().contains("link");
+        #let name = if (hasLink) {[
+          #link(proj.project.link)[#proj.project.name]
+        ]} else {[
+          #proj.project.name
+        ]};
 
-        #par[
-          #set text(
-            size: eval(settings.font.size.heading),
-            font: settings.font.general
-          )
+        #let tags = text(
+          size: eval(settings.font.size.tags),
+          font: settings.font.general,
+          fill: luma(45%)
+        )[#proj.project.tags.join(" • ")]
 
-          #let name = if (proj.project.at("link", default: none) != none) {[
-            #link(proj.project.link)[#proj.project.name]
-          ]} else {[
-            #proj.project.name
-          ]};
+        #set par(spacing: .6em, leading: .5em)
 
-          #let tags = text(
-            size: eval(settings.font.size.tags),
-            font: settings.font.general,
-            fill: luma(45%)
-          )[#proj.project.tags.join(" • ")]
+        #grid(
+          columns: (1fr, auto),
+          // gutter: .5em,
+          name, align(right, tags)
+        )
 
-          #grid(
-            columns: (1fr, auto),
-            // gutter: .5em,
-            name, align(right, tags)
-          )
-        ]
-        #par[
-          #set text(
-            size: eval(settings.font.size.description),
-            font: settings.font.general
-          )
-          #proj.description
-        ]
+        #text(
+          size: eval(settings.font.size.description),
+          font: settings.font.general,
+          proj.description
+        )
+
+        #v(1em)
       ]
-      #v(1em)
-    ]
+    );
+
+    list(
+      spacing: eval(settings.paragraph.leading), ..items
+    )
   }
 ]}
 
