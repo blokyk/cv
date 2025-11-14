@@ -9,7 +9,9 @@ contacts:
   github: "blokyk"
 
 bio: >
-  Aside from being a second-year student at the ESISAR engineering school, I'm mostly someone driven by my passion for coding, my boundless curiosity, and my daily playlist.
+  Aside from being a second-year student at the ESISAR engineering school,
+  I'm mostly someone driven by my passion for coding, my boundless curiosity,
+  and my daily playlist.
 
 skills:
   - name: Spoken Languages
@@ -83,10 +85,11 @@ projects:
         - Developper tooling
         - CLI
     description: >
-      A C# package that allows creating full-featured
-      command-line apps by simply describing the accepted
-      options, arguments and commands with normal C# fields and methods. StarKid then generates the corresponding CLI parser
-      at compile-time using Roslyn source generators.
+      A C# package that allows creating full-featured command-line apps
+      by simply describing the accepted options, arguments and commands
+      with normal C# fields and methods. StarKid then generates the
+      corresponding argument parser at compile-time using Roslyn source
+      generators.
     from: "2022"
     to: "present"
   - project:
@@ -98,7 +101,10 @@ projects:
         - Parsing
         - Language Design
     description: >
-      A custom programming language, designed and implemented entirely by myself from the ground up. Still in the early stages (currently reworking on the type system). In practice, the focus is mainly on being able to give clear (Elm- or Rust-style) error messages.
+      A custom programming language, designed and implemented entirely by
+      myself from the ground up. Still in the early stages (currently working
+      on the type system). In practice, the focus is mainly on being able to
+      give clear (Elm- or Rust-style) error messages.
     from: "2020"
     to: "present"
   - project:
@@ -109,9 +115,12 @@ projects:
         - RISC-V Assembly
         - Testing
     description: >
-      A RISC-V assembler & emulator written in C, implementing the basic
-      RV64-I instruction set. Written in the context of course CS351, with
-      a focus on testing and accuracy. Implementation-wise, smart use of macros and preprocessor tricks allowed an extensible, declarative way to specify instructions.
+      A RISC-V assembler & emulator written in C, implementing the basic RV64-I
+      instruction set. Written in the context of course CS351, with a focus on
+      testing and accuracy. Implementation-wise, smart use of macros and
+      preprocessor tricks allowed an extensible, declarative way to specify
+      instructions. Modifying a reference emulator allowed fuzzing-like testing
+      and validation of the implementation.
     from: "October 2023"
     to: "January 2024"
   - project:
@@ -122,7 +131,10 @@ projects:
         - Haskell
         - C
     description: >
-      A pair of AES implementations, one written in Haskell, using mathematical formalism (fields, polynomials, etc) to model byte-level arithmetic, and one written in C, with a large focus on performance and optimisation. Also wrote a test framework for the Haskell version.
+      A pair of AES implementations, one written in Haskell, using mathematical
+      formalism (fields, polynomials, etc) to model byte-level arithmetic, and
+      one written in C, with a large focus on performance and optimisation.
+      Also wrote a test framework for the Haskell version.
     from: "March 2023"
     to: "June 2023"
   - project:
@@ -132,6 +144,9 @@ projects:
         - Youth
         - Teamwork
     description: >
-      Volunteered to help younger, impoverished students with their homework after school, sometimes teaching key concepts to an entire group, and sometimes working one-on-one with each student. (Wow this feels VERY exploitative to write.)
+      Volunteered to help younger, impoverished students with their homework
+      after school, sometimes teaching key concepts to an entire group, and
+      sometimes working one-on-one with each student. (Wow this feels VERY
+      exploitative to write.)
     from: "September 2022"
     to: "May 2023"
