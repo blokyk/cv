@@ -80,15 +80,6 @@
 ]
 
 #let mainSection = {[
-
-  // #par[
-  //   #set align(center)
-  //   #figure(
-  //     image("images/Kodak 20 Zanvoort Lumi.jpg", width: 6em),
-  //     placement: top,
-  //   )
-  // ]
-
   #text(
     size: eval(settings.font.size.heading_huge),
     font: settings.font.general,
