@@ -1,7 +1,7 @@
 contacts:
   name: Zoë Courvoisier-Clément
   title: Second-year engineering student at ESISAR school
-  email: pro.courvoisier@gmail.com 
+  email: pro.courvoisier@gmail.com
   phone: "06 66 05 77 47"
   address: "26000 Valence, France"
   mobility: "bus, train"
@@ -38,7 +38,7 @@ skills:
 
 jobs:
     # tags:
-  - position: IT division internship 
+  - position: IT division internship
     company:
       name: Faurecia
       link: https://faurecia.com/
@@ -64,12 +64,12 @@ jobs:
 
 education:
   - university:
-      name: Esisar - Grenoble INP
+      name: Esisar – Grenoble INP
       link: "https://esisar.grenoble-inp.fr/"
     degree: "Engineering degree"
     description: >
       Computer science, cybersecurity, networking, operating systems, embedded development
-      
+
       (Currently in my fourth year overall.)
     from: "2021"
     to: "2026"
@@ -111,7 +111,7 @@ projects:
     description: >
       A RISC-V assembler & emulator written in C, implementing the basic
       RV64-I instruction set. Written in the context of course CS351, with
-      a focus on testing and accuracy. Implementation-wise, smart use of macros and preprocessor tricks allowed an extensible, declarative way to specify instructions. 
+      a focus on testing and accuracy. Implementation-wise, smart use of macros and preprocessor tricks allowed an extensible, declarative way to specify instructions.
     from: "October 2023"
     to: "January 2024"
   - project:
