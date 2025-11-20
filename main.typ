@@ -71,8 +71,6 @@
 
   #{
     for place in conf.education [
-      // #v(.5em)
-
       #set par(spacing: .8em)
       #set text(
         size: eval(settings.font.size.heading),
@@ -124,16 +122,16 @@
     conf.contacts.title
   )
 
-  #v(.8em)
 
   = #intl(lang.titles.exp)
 
-  #v(.8em)
+  #v(.5em)
 
   #{
     set par(spacing: .6em)
 
-    for job in conf.jobs [
+    for job in conf.jobs.rev() [
+      #set par(leading: eval(settings.paragraph.leading) + .1em)
       #[
         #set text(
           size: eval(settings.font.size.heading),
@@ -154,7 +152,6 @@
 
       #list(
         indent: .8em,
-        spacing: eval(settings.paragraph.leading),
         ..(job.description.map(
           p =>
             text(
@@ -173,10 +170,10 @@
 
   = #intl(lang.titles.proj)
 
-  #v(.8em)
+  #v(.5em)
 
   #{
-    set par(justify: true)
+    set par(justify: true, leading: eval(settings.paragraph.leading), spacing: .5em)
     set text(
       size: eval(settings.font.size.heading),
       font: settings.font.general
@@ -197,7 +194,7 @@
           fill: luma(45%)
         )[#proj.project.tags.join(" • ")]
 
-        #set par(spacing: .6em, leading: .5em)
+        #set par(spacing: .6em)
 
         #grid(
           columns: (1fr, auto),
@@ -210,13 +207,11 @@
           font: settings.font.general,
           proj.description
         )
-
-        #v(1em)
       ]
     );
 
     list(
-      spacing: eval(settings.paragraph.leading), ..items
+      spacing: eval(settings.paragraph.leading) + 1em, ..items
     )
   }
 ]}
