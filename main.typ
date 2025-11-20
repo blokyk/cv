@@ -71,12 +71,14 @@
 
   #{
     for place in conf.education [
+      // #v(.5em)
+
+      #set par(spacing: .8em)
       #set text(
         size: eval(settings.font.size.heading),
         font: settings.font.general
       )
 
-      #place.from #sym.dash.en #place.to \
       #link(place.university.link)[#place.university.name]
 
       #set text(
@@ -84,8 +86,11 @@
         font: settings.font.minor_highlight,
       )
 
-      *#place.degree* \
+      *#place.degree*
+      _ #place.from #sym.dash.en #place.to _ \
       #place.description
+
+      #v(.5em)
     ]
   }
 
