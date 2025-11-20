@@ -186,7 +186,7 @@
       proj => [
         #let hasLink = proj.project.keys().contains("link");
         #let name = if (hasLink) {[
-          #link(proj.project.link)[#proj.project.name]
+          #link(proj.project.link)[#proj.project.name #box(image("github-mark.svg"), height: .7em)]
         ]} else {[
           #proj.project.name
         ]};
