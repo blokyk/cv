@@ -58,6 +58,7 @@
   #line(length: 100%)
 
   #[
+    #set par(justify: true)
     #set text(
       eval(settings.font.size.education_description),
       font: settings.font.minor_highlight,
