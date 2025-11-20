@@ -59,7 +59,7 @@ jobs:
     to: "2024 August"
     description:
       - Built a modified RISC-V toolchain for the Vector (RVV) extension
-      - Surveyed the state-of-the-art of RVV co-processor designs
+      - Surveyed the state-of-the-art of RVV co-processor hardware designs
       - Manually vectorized (in both AVX and RVV) data-processing algorithms
       - Measured and compared the performance of vectorized vs scalar variants
       - Worked with a team of interns and researchers on a national project
