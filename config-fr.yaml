@@ -87,10 +87,10 @@ education:
 projects:
   - project:
       name: StarKid
-      #link: "https://github.com/blokyk/starkid"
+      link: "https://github.com/blokyk/starkid"
       tags:
         - C#
-        - Developper tooling
+        - Developer tooling
         - CLI
     description: >
       A C# package that allows creating full-featured command-line apps
@@ -99,7 +99,7 @@ projects:
       corresponding argument parser at compile-time using Roslyn source
       generators.
     from: "2022"
-    to: "present"
+    to: "2025"
   - project:
       name: Lotus
       link: https://github.com/lotuslang/lotus
