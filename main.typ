@@ -51,8 +51,10 @@
     // LinkedIn: #link(configuration.contacts.linkedin)[Zoë Courvoisier-Clément] \
     GitHub: #link("https://github.com/" + conf.contacts.github)[#conf.contacts.github]
 
-    #conf.contacts.address
-    #text(fill: luma(45%))[(#conf.contacts.mobility)]
+    #if conf.contacts.keys().contains("address") [
+      #conf.contacts.address
+      #text(fill: luma(45%))[(#conf.contacts.mobility)]
+    ]
   ]
 
   #line(length: 100%)

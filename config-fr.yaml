@@ -3,7 +3,7 @@ contacts:
   title: "Étudiant de 3ᵉ année d'étude d'ingénieur à l'ESISAR"
   email: pro@zoeee.net
   phone: "+33 6 66 05 77 47"
-  address: "26000 Valence, France"
+  # address: "26000 Valence, France"
   mobility: "bus, train"
   nationality: Française
   github: "blokyk"

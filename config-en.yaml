@@ -3,7 +3,7 @@ contacts:
   title: Third-year engineering student at ESISAR school
   email: pro@zoeee.net
   phone: "+33 6 66 05 77 47"
-  address: "26000 Valence, France"
+  # address: "26000 Valence, France"
   mobility: "bus, train"
   nationality: French
   github: "blokyk"
