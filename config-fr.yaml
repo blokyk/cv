@@ -39,30 +39,33 @@ skills:
       - Linux administration
 
 jobs:
-    # tags:
-  - position: Stagiaire du service informatique
-    company:
-      name: Faurecia
-      link: https://faurecia.com/
-    from: "Juin"
-    to: "Juillet 2018"
-    description:
-      - Repaired employees' computers
-      - Checked server status
-      - Helped employees with miscellaneous computer problems
-
   - position: Research internship
     company:
       name: LCIS laboratory
       link: https://lcis.fr
-    from: "2024 June"
-    to: "2024 August"
+    from: "June"
+    to: "August 2024"
     description:
-      - Built a modified RISC-V toolchain for the RISC-V Vector (RVV) extension
+      - Built a modified RISC-V toolchain for the Vector (RVV) extension
       - Surveyed the state-of-the-art of RVV co-processor hardware designs
       - Manually vectorized (in both AVX and RVV) data-processing algorithms
-      - Setup benchmarks comparing the performance of vectorized vs scalar code
-      - Worked with a team of interns and researchers on a nation-wide project
+      - Measured and compared the performance of vectorized vs scalar variants
+      - Worked with a team of interns and researchers on a national project
+  - position: Full-stack & mobile developer
+    company:
+      name: Olorin
+      link: "https://olorin-web3.com/"
+    from: "January"
+    to: "July 2025"
+    description:
+      - Took the company's concept from idea to MVP
+      - Fleshed out a basic back-end architecture (ASP.NET Core + PostgreSQL)
+      - Explored cross-platform frameworks to find the most suitable (Flutter)
+      - Wrote platform-specific code interacting with unreleased NFC technology
+      - Took great care to maximize users' privacy, using novel key-exchange
+        protocols and other cryptographic techniques
+      - Collaborated with UI/UX designer to develop a truly modern interface
+      - Corrected roadmap to adapt to production delays and changing budget
 
 education:
   - university:
