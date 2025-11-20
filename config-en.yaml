@@ -75,6 +75,14 @@ education:
       (Currently in my fourth year overall.)
     from: "2021"
     to: "2026"
+  - university:
+      name: University of Porto
+      link: "https://www.up.pt/fcup/en/"
+    degree: "Computer Science M1        "
+    description: >
+      Computer science, computer vision, cryptography. Spent half a year there for as an ERASMUS student.
+    from: "September 2025"
+    to: "February 2026"
 
 projects:
   - project:
