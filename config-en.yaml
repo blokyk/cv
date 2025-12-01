@@ -39,7 +39,7 @@ skills:
       - Linux administration
 
 jobs:
-  - position: Research internship
+  - position: Research internship - RISC-V tooling
     company:
       name: LCIS laboratory
       link: https://lcis.fr
@@ -119,7 +119,7 @@ projects:
     from: "2020"
     to: "present"
   - project:
-      name: RISC-V Emulator
+      name: RISC-V emulator
       link: "https://github.com/blokyk/px-cs351"
       tags:
         - C
@@ -135,7 +135,7 @@ projects:
     from: "October 2023"
     to: "January 2024"
   - project:
-      name: AES Implementation
+      name: AES implementation
       link: "https://github.com/blokyk/px222-aes"
       tags:
         - Cryptography
