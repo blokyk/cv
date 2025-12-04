@@ -22,8 +22,9 @@ skills:
     items:
       - C#
       - C
-      - Dart/Flutter
+      - Nix
       - Haskell
+      - Java
       - GLSL
       - Go
       - Python
@@ -31,12 +32,17 @@ skills:
   - name: Tools
     items:
       - VS Code
-      - Visual Studio 2025
       - Git
       - GitHub/GitLab
+      - Visual Studio 2025
+      - Android Studio
   - name: Miscellaneous
     items:
       - Linux administration
+      - Packaging
+      - Self-hosting
+      - Network administration
+      - Compiler tinkering
 
 jobs:
   - position: Research internship - RISC-V tooling
