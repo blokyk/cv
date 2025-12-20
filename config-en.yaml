@@ -135,17 +135,17 @@ projects:
     from: "October 2023"
     to: "January 2024"
   - project:
-      name: AES implementation
-      link: "https://github.com/blokyk/px222-aes"
+      name: Transparent proxy (Go + eBPF)
+      link: "https://github.com/blokyk/ebpf-tunnel"
       tags:
-        - Cryptography
-        - Haskell
-        - C
+        - Go
+        - Networking
+        - Kernel eBPF
     description: >
-      A pair of AES implementations, one written in Haskell, using mathematical
-      formalism (fields, polynomials, etc) to model byte-level arithmetic, and
-      one written in C, with a large focus on performance and optimisation.
-      Also wrote a test framework for the Haskell version.
+      A small Go/C/eBPF project to reroute every HTTP request on a machine into
+      a proxying tunnel. This allows using a proxy on a computer without any of
+      the apps needing to know about it, support it, and most importantly know
+      the user's credentials.
     from: "March 2023"
     to: "June 2023"
   - project:
