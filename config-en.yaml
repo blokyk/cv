@@ -124,7 +124,7 @@ projects:
       tags:
         - C
         - RISC-V Assembly
-        - Testing
+        - Validation
     description: >
       A RISC-V assembler & emulator written in C, implementing the basic RV64-I
       instruction set. Written in the context of course CS351, with a focus on
