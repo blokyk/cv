@@ -22,12 +22,13 @@ skills:
     items:
       - C#
       - C
+      - Nix
       - Dart/Flutter
       - Haskell
-      - GLSL
       - Go
       - Python
       - VHDL
+      - GLSL
   - name: Tools
     items:
       - VS Code
@@ -36,6 +37,9 @@ skills:
       - GitHub/GitLab
   - name: Miscellaneous
     items:
+      - Packaging
+      - Self-hosting
+      - Compiler tinkering
       - Linux administration
 
 jobs:
