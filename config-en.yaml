@@ -139,19 +139,17 @@ projects:
     from: "October 2023"
     to: "January 2024"
   - project:
-      name: AES implementation
-      link: "https://github.com/blokyk/px222-aes"
+      name: Open-source FPGA toolchain
       tags:
-        - Cryptography
-        - Haskell
-        - C
+        - FPGA
+        - Non-proprietary
+        - VHDL
+    date: "January 2024"
     description: >
-      A pair of AES implementations, one written in Haskell, using mathematical
-      formalism (fields, polynomials, etc) to model byte-level arithmetic, and
-      one written in C, with a large focus on performance and optimisation.
-      Also wrote a test framework for the Haskell version.
-    from: "March 2023"
-    to: "June 2023"
+      A small toolchain (simulator, synthesizer, place-and-router, flasher) for
+      working with a few Xilinx FPGA boards in VHDL, built purely out of
+      open-source software and spite towards Vivado. I only gathered and glued
+      together existing components, but it's harder than it sounds :)
   - project:
       name: Youth teaching volunteer
       tags:
