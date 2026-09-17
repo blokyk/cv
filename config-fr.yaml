@@ -22,11 +22,13 @@ skills:
     items:
       - C#
       - C
+      - Nix
       - Dart/Flutter
       - Haskell
-      - GLSL
       - Go
       - Python
+      - C++
+      - GLSL
       - VHDL
   - name: Outils
     items:

@@ -27,8 +27,9 @@ skills:
       - Haskell
       - Go
       - Python
-      - VHDL
+      - C++
       - GLSL
+      - VHDL
   - name: Tools
     items:
       - VS Code
