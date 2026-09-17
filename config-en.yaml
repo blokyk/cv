@@ -1,6 +1,6 @@
 contacts:
   name: Zoë Courvoisier-Clément
-  title: Third-year engineering student at ESISAR school
+  title: ESISAR graduate
   email: pro@zoeee.net
   phone: "+33 6 66 05 77 47"
   # address: "26000 Valence, France"
@@ -9,7 +9,6 @@ contacts:
   github: "blokyk"
 
 bio: >
-  Aside from being a third-year student at the ESISAR engineering school,
   I'm mostly someone driven by my passion for coding, my boundless curiosity,
   and my daily playlist.
 
@@ -23,28 +22,29 @@ skills:
       - C#
       - C
       - Nix
-      - Dart/Flutter
       - Haskell
-      - Go
-      - Python
       - C++
+      - Dart/Flutter
+      - Python
+      - Go
       - GLSL
       - VHDL
   - name: Tools
     items:
       - VS Code
-      - Visual Studio 2025
       - Git
       - GitHub/GitLab
   - name: Miscellaneous
     items:
       - Packaging
-      - Self-hosting
       - Compiler tinkering
+      - Autonomy
+      - Self-hosting
+      - Technical writing
       - Linux administration
 
 jobs:
-  - position: Research internship - RISC-V tooling
+  - position: RISC-V Vector tooling
     company:
       name: LCIS laboratory
       link: https://lcis.fr
@@ -56,21 +56,19 @@ jobs:
       - Manually vectorized (in both AVX and RVV) data-processing algorithms
       - Measured and compared the performance of vectorized vs scalar variants
       - Worked with a team of interns and researchers on a national project
-  - position: Full-stack & mobile developer
+  - position: Cache coherency hints in RISC-V
     company:
-      name: Olorin
-      link: "https://olorin-web3.com/"
-    from: "January"
-    to: "July 2025"
+      name: TIMA laboratory
+      link: https://tima.univ-grenoble-alpes.fr/
+    from: "April"
+    to: "September 2026"
     description:
-      - Took the company's concept from idea to MVP
-      - Fleshed out a basic back-end architecture (ASP.NET Core + PostgreSQL)
-      - Explored cross-platform frameworks to find the most suitable (Flutter)
-      - Wrote platform-specific code interacting with unreleased NFC technology
-      - Took great care to maximize users' privacy, using novel key-exchange
-        protocols and other cryptographic techniques
-      - Collaborated with UI/UX designer to develop a truly modern interface
-      - Corrected roadmap to adapt to production delays and changing budget
+      - Added new hint instructions to the LLVM compiler
+      - Heavily modified an optimisation pass to use those new instructions
+      - Added support for those instructions to the gem5 simulator
+      - Validated a cache coherency protocol's behavior w.r.t. the new hints
+      - Measured the performance impact of the optimisation and instruction
+      - Documented the process and packaged the modifications and results
 
 education:
   - university:
@@ -80,13 +78,13 @@ education:
     description: >
       Computer science, cybersecurity, networking, operating systems, embedded development
 
-      (Currently in my fifth year overall.)
+      (Currently at the tail end of my fifth year overall.)
     from: "2021"
     to: "2026"
   - university:
       name: University of Porto
       link: "https://www.up.pt/fcup/en/"
-    degree: "Computer Science M1        "
+    degree: "Computer Science M1"
     description: >
       Computer science, computer vision, cryptography. Spent half a year there as an ERASMUS student.
     from: "September 2025"
@@ -101,9 +99,9 @@ projects:
         - Developer tooling
         - CLI
     description: >
-      A C# package that allows creating full-featured command-line apps
+      A C\# package that allows creating full-featured command-line apps
       by simply describing the accepted options, arguments and commands
-      with normal C# fields and methods. StarKid then generates the
+      with normal C\# fields and methods. StarKid then generates the
       corresponding argument parser at compile-time using Roslyn source
       generators.
     from: "2022"
@@ -149,18 +147,5 @@ projects:
     description: >
       A small toolchain (simulator, synthesizer, place-and-router, flasher) for
       working with a few Xilinx FPGA boards in VHDL, built purely out of
-      open-source software and spite towards Vivado. I only gathered and glued
+      open-source software (and spite towards Vivado). I only gathered and glued
       together existing components, but it's harder than it sounds :)
-  - project:
-      name: Youth teaching volunteer
-      tags:
-        - Education
-        - Youth
-        - Teamwork
-    description: >
-      Volunteered to help younger, impoverished students with their homework
-      after school, sometimes teaching key concepts to an entire group, and
-      sometimes working one-on-one with each student. (Wow this feels VERY
-      exploitative to write.)
-    from: "September 2022"
-    to: "May 2023"

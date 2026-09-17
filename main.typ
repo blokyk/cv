@@ -62,7 +62,7 @@
   #[
     #set par(justify: true)
     #set text(
-      eval(settings.font.size.education_description),
+      9pt,
       font: settings.font.minor_highlight,
     )
 
@@ -87,7 +87,7 @@
       )
 
       *#place.degree*
-      _ #place.from #sym.dash.en #place.to _ \
+      _ #box[#place.from #sym.dash.en #place.to] _ \
       #place.description
 
       #v(.5em)
@@ -181,12 +181,20 @@
       font: settings.font.general
     )
 
+    let logos = (
+      "github.com": image("/github-mark.svg"),
+      "lix.systems": image("/lix-logo.svg")
+    )
+
     let items = conf.projects.map(
       proj => [
         #let hasLink = proj.project.keys().contains("link");
-        #let name = if (hasLink) {[
-          #link(proj.project.link)[#proj.project.name #box(image("github-mark.svg"), height: .7em)]
-        ]} else {[
+        #let name = if (hasLink) {
+          let linkHost = proj.project.link.split("/").at(2)
+          let logo = logos.at(linkHost)
+
+          link(proj.project.link)[#proj.project.name #box(logo, height: .7em)]
+        } else {[
           #proj.project.name
         ]};
 
@@ -207,7 +215,7 @@
         #text(
           size: eval(settings.font.size.description),
           font: settings.font.general,
-          proj.description
+          eval("[" + proj.description + "]")
         )
       ]
     );
