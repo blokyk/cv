@@ -1,6 +1,6 @@
 contacts:
   name: Zoë Courvoisier-Clément
-  title: ESISAR graduate
+  title: Software engineer
   email: pro@zoeee.net
   phone: "+33 6 66 05 77 47"
   # address: "26000 Valence, France"
@@ -76,9 +76,7 @@ education:
       link: "https://esisar.grenoble-inp.fr/"
     degree: "Engineering degree"
     description: >
-      Computer science, cybersecurity, networking, operating systems, embedded development
-
-      (Currently at the tail end of my fifth year overall.)
+      Computer science, cybersecurity, networking, operating systems, embedded development.
     from: "2021"
     to: "2026"
   - university:
